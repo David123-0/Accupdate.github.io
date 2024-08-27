@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Update Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update as at <input type="date" id="updateDate"></h1>
+        
+        <h2>Inflow</h2>
+        <div id="inflowSection">
+            <div class="entry">
+                <input type="text" placeholder="Title of Inflow" class="title">
+                <input type="number" placeholder="Amount in Naira" class="naira inflow">
+                <input type="number" placeholder="Amount in Dollars" class="dollar inflow">
+                <input type="date" class="date">
+            </div>
+        </div>
+        <button id="addInflow">Add Inflow</button>
+        <div class="total">
+            <p>Total Inflow in Naira: <span id="totalInflowNaira">0</span></p>
+            <p>Total Inflow in Dollars: <span id="totalInflowDollar">0</span></p>
+        </div>
+
+        <h2>Disbursement</h2>
+        <div id="disbursementSection">
+            <div class="entry">
+                <input type="text" placeholder="Title of Disbursement" class="title">
+                <input type="number" placeholder="Amount in Naira" class="naira disbursement">
+                <input type="number" placeholder="Amount in Dollars" class="dollar disbursement">
+                <input type="date" class="date">
+            </div>
+        </div>
+        <button id="addDisbursement">Add Disbursement</button>
+        <div class="total">
+            <p>Total Disbursement in Naira: <span id="totalDisbursementNaira">0</span></p>
+            <p>Total Disbursement in Dollars: <span id="totalDisbursementDollar">0</span></p>
+        </div>
+
+        <h2>Summary</h2>
+        <div class="summary">
+            <p>Balance Brought Forward in Naira: <input type="number" id="balanceForwardNaira" placeholder="0"></p>
+            <p>Balance Brought Forward in Dollars: <input type="number" id="balanceForwardDollar" placeholder="0"></p>
+            <p>Final Updated Balance in Naira: <span id="finalBalanceNaira">0</span></p>
+            <p>Final Updated Balance in Dollars: <span id="finalBalanceDollar">0</span></p>
+        </div>
+
+        <button id="saveToPDF">Save to PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
